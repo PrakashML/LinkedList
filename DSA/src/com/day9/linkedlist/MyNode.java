@@ -1,11 +1,23 @@
 package com.day9.linkedlist;
 
-public class MyNode<K> {
-    private K key;
-    private MyNode next;
-    public MyNode(int i){
-        this.key = null;
+public class MyNode {
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public int data;
+    public MyNode next;
+    public MyNode(int data){
+        this.data = data;
         this.next = null;
+    }
+    public MyNode(int data, MyNode next){
+        this.data = data;
+        this.next = next;
     }
     public MyNode getNext() {
         return next;
@@ -17,7 +29,7 @@ public class MyNode<K> {
     @Override
     public String toString() {
         return "MyNode{" +
-                "key=" + key +
+                "data=" + data +
                 ", next=" + next +
                 '}';
     }
