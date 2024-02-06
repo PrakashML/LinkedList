@@ -14,18 +14,3 @@ public class Main {
     }
 }
 
-//public void inbetween(int data, int pos){
-//    MyNode temp = new MyNode(data);
-//    int pos1 = 1;
-//    MyNode current = head;
-//    if(pos == 0){
-//        addnode(data);
-//        return;
-//    }
-//    while(pos1 != pos){
-//        current = current.next;
-//        pos1+=1;
-//    }
-//    temp.next = current.next;
-//    current.next = temp;
-//}
