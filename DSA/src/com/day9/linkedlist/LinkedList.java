@@ -48,6 +48,19 @@ public class LinkedList {
         temp.next = current.next;
         current.next = temp;
     }
+
+    public void poplast(){
+        MyNode current = head;
+        if(head.next == null){
+            head = null;
+            return;
+        }
+        while(current.next.next != null){
+            current = current.next;
+        }
+        current.next = null;
+    }
+
     public void displayList(){
         MyNode current = head;
         while(current != null){
