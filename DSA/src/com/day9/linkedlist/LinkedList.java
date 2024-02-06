@@ -29,6 +29,10 @@ public class LinkedList {
 
         last.next = newnode;
     }
+
+    public void popfront(){
+        head = head.next;
+    }
     public void inbetween(int data, int pos){
         MyNode temp = new MyNode(data);
         int pos1 = 1;

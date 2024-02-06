@@ -6,6 +6,7 @@ public class MyNodeTest {
         mylist.addnode(56);
         mylist.appendnode(70);
         mylist.inbetween(30,1);
+        mylist.popfront();
         mylist.displayList();
     }
 }
