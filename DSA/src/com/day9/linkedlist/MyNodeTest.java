@@ -9,5 +9,7 @@ public class MyNodeTest {
         mylist.inbetween(30,1);
         System.out.println("The given value in the index: "+mylist.searchnode(30));
         mylist.displayList();
+        mylist.insert(40,30);
+        mylist.displayList();
     }
 }
