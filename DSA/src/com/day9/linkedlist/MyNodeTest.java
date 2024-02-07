@@ -1,4 +1,5 @@
 package com.day9.linkedlist;
+import org.junit.*;
 
 public class MyNodeTest {
     public static void main(String[] args) {
@@ -6,7 +7,7 @@ public class MyNodeTest {
         mylist.addnode(56);
         mylist.appendnode(70);
         mylist.inbetween(30,1);
-        mylist.poplast();
+        System.out.println("The given value in the index: "+mylist.searchnode(30));
         mylist.displayList();
     }
 }

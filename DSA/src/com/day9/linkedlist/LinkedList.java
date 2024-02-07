@@ -61,6 +61,19 @@ public class LinkedList {
         current.next = null;
     }
 
+    public int searchnode(int value){
+        MyNode current = head;
+        int pos = 0;
+        while(current != null){
+            if(current.data == value){
+                return pos;
+            }
+            current = current.next;
+            pos+=1;
+        }
+        return 0;
+    }
+
     public void displayList(){
         MyNode current = head;
         while(current != null){
