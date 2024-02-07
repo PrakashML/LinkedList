@@ -5,6 +5,7 @@ public class LinkedList {
     MyNode next;
     MyNode tail;
     MyNode data;
+    int size = 0;
     public LinkedList(){
         this.head = null;
     }
@@ -13,6 +14,7 @@ public class LinkedList {
         MyNode newnode = new MyNode(data);
         newnode.next = head;
         head = newnode;
+        size++;
     }
 
     public void appendnode(int data){
@@ -28,10 +30,12 @@ public class LinkedList {
         }
 
         last.next = newnode;
+        size++;
     }
 
     public void popfront(){
         head = head.next;
+        size--;
     }
     public void inbetween(int data, int pos){
         MyNode temp = new MyNode(data);
@@ -47,6 +51,7 @@ public class LinkedList {
         }
         temp.next = current.next;
         current.next = temp;
+        size++;
     }
 
     public void insert(int data, int key){
@@ -57,6 +62,7 @@ public class LinkedList {
         }
         temp.next = current.next;
         current.next = temp;
+        size++;
     }
 
     public void poplast(){
@@ -69,6 +75,7 @@ public class LinkedList {
             current = current.next;
         }
         current.next = null;
+        size--;
     }
 
     public int searchnode(int value){
@@ -84,6 +91,15 @@ public class LinkedList {
         return 0;
     }
 
+    public void deletenode(int data){
+        MyNode current = head;
+        while(current.next.data != data){
+            current = current.next;
+        }
+        current.next = current.next.next;
+        size--;
+    }
+
     public void displayList(){
         MyNode current = head;
         while(current != null){
@@ -91,5 +107,6 @@ public class LinkedList {
             current = current.next;
         }
         System.out.println("END");
+        System.out.println("size of the linked list is: "+size);
     }
 }

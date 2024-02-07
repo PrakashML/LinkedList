@@ -11,5 +11,7 @@ public class MyNodeTest {
         mylist.displayList();
         mylist.insert(40,30);
         mylist.displayList();
+        mylist.deletenode(40);
+        mylist.displayList();
     }
 }
