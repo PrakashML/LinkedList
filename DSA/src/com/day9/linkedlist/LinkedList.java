@@ -1,4 +1,5 @@
 package com.day9.linkedlist;
+import java.util.*;
 
 public class LinkedList {
     MyNode head;
@@ -98,6 +99,23 @@ public class LinkedList {
         }
         current.next = current.next.next;
         size--;
+    }
+
+    public void sortadd(int data){
+        MyNode newNode = new MyNode(data);
+        if(head == null || data < head.data){
+            newNode.next = head;
+            head = newNode;
+        }
+        else{
+            MyNode current = head;
+            while(current.next != null && data>current.next.data){
+                current = current.next;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+
     }
 
     public void displayList(){
